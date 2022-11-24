@@ -5,7 +5,7 @@ var cors = require("cors");
 
 const app = express();
 
-app.use(express.static("../eshop"));
+app.use(express.static("./eshop"));
 app.use(bodyParser.json());
 app.use(cors());
 
