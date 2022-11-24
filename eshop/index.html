@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>eShop</title>
+  <meta charset="utf-8">
+</head>
+<body>
+  <div id="app">
+    <header>
+      <goods-search v-model="searchLine" @filter-goods="filterGoods"></goods-search>
+      <cart :delete-from-cart="deleteGoodFromCart" :goods="cartGoods"></cart>
+    </header>
+    <main><goods-list :add-to-cart="addGoodToCart" :goods="filteredGoods"></goods-list></main>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+  <script src="components.js"></script>
+  <script src="script.js"></script>
+  <link href="style.css" rel="stylesheet">
+</body>
+</html>
